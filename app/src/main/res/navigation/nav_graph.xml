@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imagesFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.crud.myretrofitwithmvvmapp.presentation.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="uz.crud.myretrofitwithmvvmapp.presentation.fragment.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" >
+        <action
+            android:id="@+id/action_commentsFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="uz.crud.myretrofitwithmvvmapp.presentation.fragment.ImagesFragment"
+        android:label="fragment_images"
+        tools:layout="@layout/fragment_images" >
+        <action
+            android:id="@+id/action_imagesFragment_to_massageFragment"
+            app:destination="@id/massageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/massageFragment"
+        android:name="uz.crud.myretrofitwithmvvmapp.presentation.fragment.MassageFragment"
+        android:label="fragment_massage"
+        tools:layout="@layout/fragment_massage" />
+</navigation>
